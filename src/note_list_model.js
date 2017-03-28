@@ -1,5 +1,3 @@
-debugger;
-
 (function(exports) {
 
   function NoteList(){
@@ -12,10 +10,10 @@ debugger;
 })(this);
 
 NoteList.prototype.printList = function(){
-  console.log(this.list.length)
-  console.log(this.list[0])
+  // console.log(this.list.length)
+  // console.log(this.list[0])
   for (var i = 0, len = this.list.length; i < len; i++){
-    this.list[i].showText()
+    return this.list[i].showText()
   }
 
   // this.list.forEach(function(element) {
