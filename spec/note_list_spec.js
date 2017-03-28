@@ -53,7 +53,19 @@ function checkNoteListCanBePrinted() {
     }
 }
 
+function createsAndStoresNote() {
+  var noteList = new NoteList();
+  noteList.create("Roar")
+  try {
+    new assert(noteList.printList() == "Roar", "note not created", "createsAndStoresNote").isTrue();
+  }
+  catch(err) {
+    console.log(err.message);
+  }
+}
+
 checkNoteListMethodExists();
 checkNoteListIsArray();
 checkNotesAreStored();
 checkNoteListCanBePrinted();
+createsAndStoresNote();

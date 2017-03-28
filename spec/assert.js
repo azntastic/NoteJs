@@ -1,3 +1,5 @@
+// nb this is irrelevant
+
 var assert = {
   isTrue: function(assertiontocheck){
     if (!assertiontocheck) {
