@@ -10,5 +10,8 @@
 })(this);
 
 NoteList.prototype.printList = function(){
-  return this.list;
+  this.list.forEach(function(note) {
+  // note.showText();
+  console.log(note.showText());
+  });
 };
