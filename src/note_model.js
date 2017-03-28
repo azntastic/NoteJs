@@ -7,5 +7,5 @@ Note.prototype.showText = function(){
 };
 
 
-var note = new Note();
-note.showText();
+// var note = new Note();
+// note.showText();

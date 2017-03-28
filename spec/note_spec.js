@@ -1,17 +1,20 @@
 function  returnNoteMethodExists() {
   var note = new Note();
-  if (typeof note.showText() == undefined){
-    throw new Error("Method doesn't exist!");
-  }
-}
 
-function testsForInstantiationArg() {
-  var note = new Note();
-  if (note.text == null) {
-    throw new Error("no text passed")
-  }
-}
+    try {
+      new assert(note.showtext , "not a function").isDefined()
+    }
+    catch(err) {
+      console.log("not a function")
+    }
+
+};
+
+// function testsForInstantiationArg() {
+//   var note = new Note("text");
+//   assert.isTrue( note.text === "text");
+// };
 
 
 returnNoteMethodExists();
-testsForInstantiationArg();
+// testsForInstantiationArg();
