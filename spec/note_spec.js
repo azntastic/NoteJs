@@ -31,8 +31,20 @@ function  checkTextInputIsStored() {
     }
 };
 
+function checkTextInputIsPrinted() {
+  var note = new Note("roar");
+
+  try {
+    new assert(note.showText() === "roar", "not true", "checkTextInputIsPrinted").isTrue()
+  }
+  catch(err) {
+    console.log(err.message)
+  }
+};
+
 
 
 checkNoteMethodExists();
 checkNoteIsString();
 checkTextInputIsStored();
+checkTextInputIsPrinted();

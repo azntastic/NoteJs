@@ -18,7 +18,7 @@ assert.prototype.isTrue = function() {
     throw new Error("Test failed, " + this.message)
   }
   else {
-    console.log("Test passed!")
+    console.log(this.functionName + " test passed!")
   };
 };
 
