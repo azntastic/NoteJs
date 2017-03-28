@@ -4,10 +4,10 @@
     this.text = string
   };
 
-  Note.prototype.showText = function(){
-    return this.text;
-  };
-
   exports.Note = Note;
 
 })(this);
+
+Note.prototype.showText = function(){
+  return this.text;
+};

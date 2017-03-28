@@ -3,11 +3,12 @@
   function NoteList(){
     this.list = [];
   };
-  //
-  // Note.prototype.showText = function(){
-  //   return this.text;
-  // };
+
 
   exports.NoteList = NoteList;
 
 })(this);
+
+NoteList.prototype.printList = function(){
+  return this.list;
+};

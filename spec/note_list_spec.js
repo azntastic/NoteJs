@@ -11,7 +11,6 @@ function  checkNoteListMethodExists() {
 
 function  checkNoteListIsArray() {
   var noteList = new NoteList();
-  console.log(noteList.list)
     try {
       new assert(Array.isArray(noteList.list) , "not an array", "checkNoteListIsArray").isTrue()
     }
@@ -20,6 +19,28 @@ function  checkNoteListIsArray() {
     }
 };
 
+function checkNotesAreStored() {
+  var noteList = new NoteList();
+  var note = new Note("Roar");
+  noteList.list.push(note);
+
+    try {
+      new assert(noteList.list[0].showText() == "Roar", "note not stored", "checkNotesAreStored").isTrue()
+    }
+    catch(err) {
+      console.log(err.message)
+    }
+};
+
+function checkPrintNoteListExists() {
+  var noteList = new NoteList();
+    try {
+      new assert(noteList.printList(), "not defined", "checkPrintNoteListExists").isDefined()
+    }
+    catch(err) {
+      console.log(err.message)
+    }
+}
 // function  checkTextInputIsStored() {
 //   var note = new Note("hello");
 //
@@ -46,3 +67,5 @@ function  checkNoteListIsArray() {
 
 checkNoteListMethodExists();
 checkNoteListIsArray();
+checkNotesAreStored();
+checkPrintNoteListExists();
