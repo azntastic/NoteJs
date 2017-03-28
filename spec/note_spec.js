@@ -2,7 +2,7 @@ function  checkNoteMethodExists() {
   var note = new Note("hello");
 
     try {
-      new assert(note.showText() , "not a function", "checkNoteMethodExists").isDefined()
+      new assert(note , "not defined", "checkNoteMethodExists").isDefined()
     }
     catch(err) {
       console.log(err.message)
