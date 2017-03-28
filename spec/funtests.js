@@ -4,11 +4,11 @@ this.message = message;
 
 }
 
-assert.prototype.isDefined = function(){
+assert.prototype.isDefined = function() {
   if(typeof this.subject === "undefined" ) {
-    throw new error("assertion failed, " + this.message)
+    throw new Error("Test failed, " + this.message)
   }
   else {
-    console.log("test passed")
-}
-}
+    console.log("Test passed!")
+  };
+};

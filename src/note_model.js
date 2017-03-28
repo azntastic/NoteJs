@@ -3,9 +3,5 @@ function Note(string){
 };
 
 Note.prototype.showText = function(){
-  return ('text')
+  return this.text;
 };
-
-
-// var note = new Note();
-// note.showText();

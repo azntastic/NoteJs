@@ -1,20 +1,27 @@
-function  returnNoteMethodExists() {
-  var note = new Note();
+function  checkNoteMethodExists() {
+  var note = new Note("hello");
 
     try {
-      new assert(note.showtext , "not a function").isDefined()
+      new assert(note.showText() , "not a function").isDefined()
     }
     catch(err) {
-      console.log("not a function")
+      console.log(err.message)
     }
 
 };
 
-// function testsForInstantiationArg() {
-//   var note = new Note("text");
-//   assert.isTrue( note.text === "text");
-// };
+function  checkNoteIsString() {
+  var note = new Note("hello");
+
+    try {
+      new assert(note.showText() , "not a string").isDefined()
+    }
+    catch(err) {
+      console.log(err.message)
+    }
+
+};
 
 
-returnNoteMethodExists();
-// testsForInstantiationArg();
+checkNoteMethodExists();
+checkNoteIsString()
