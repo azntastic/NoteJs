@@ -1,8 +1,14 @@
-document.getElementById('app').innerHTML = "Howdy!"
+(function(exports){
 
-function NoteController(noteList){
-  noteList.create("Favourite drink: G&T");
-  var listView = new ListView(noteList);
+  function NoteController(noteList) {
+    noteList.create("Favourite drink: G&T");
+    this.listToDisplay = new ListView(noteList);
+  };
 
-  document.getElementById('note').innerHTML = listView.printHTML()
-}
+  NoteController.prototype.DisplayNotes = function() {
+    document.getElementById('app').innerHTML = this.listToDisplay.printHTML()
+  };
+
+  exports.NoteController = NoteController;
+
+})(this)
