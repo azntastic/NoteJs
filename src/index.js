@@ -1,1 +1,1 @@
-(new NoteController(new NoteList())).DisplayNotes()
+(new NoteController(new NoteList())).DisplayNotes(document.getElementById('app'))
