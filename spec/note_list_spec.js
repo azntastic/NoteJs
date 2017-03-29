@@ -37,14 +37,8 @@ function checkNotesAreStored() {
 function checkNoteListCanBePrinted() {
     var noteList = new NoteList();
     var firstNote = new Note("Roar");
-    // var secondNote = new Note("Meow");
 
     noteList.list.push(firstNote);
-    // noteList.list.push(secondNote);
-    // console.log(noteList.list);
-    // console.log(noteList.printList())
-    // console.log(noteList.list[0])
-    // console.log(noteList.list[0].showText())
     try {
       new assert(noteList.printList() == "Roar", "notes not printed", "checkNoteListCanBePrinted").isTrue();
     }
