@@ -5,9 +5,13 @@
   };
 
   NoteList.prototype.printList = function(){
+
+    var a = []
+
     for (var i = 0, len = this.list.length; i < len; i++){
-      return this.list[i].showText()
+       a.push(this.list[i].showText())
     }
+      return a
   }
 
   NoteList.prototype.create = function(text){

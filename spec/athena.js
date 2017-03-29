@@ -3,7 +3,7 @@ function assert(subject, message, functionName){
   this.message = message;
   this.functionName = functionName
 }
-
+// move try/catch out
 assert.prototype.isDefined = function() {
   if(typeof this.subject === "undefined" ) {
     throw new Error("Test failed, " + this.message)
