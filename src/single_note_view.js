@@ -1,6 +1,6 @@
 (function(exports){
 
-  function SingleNoteView(){
+  function SingleNoteView(note){
 
   }
 
