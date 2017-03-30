@@ -12,7 +12,8 @@
     }
     else {
       this.noteListToPrint.printList().forEach(function(element){
-        printAsHTML += "<li>" + element + "</li>"
+
+        printAsHTML += "<li>" + element.substring(0,20) + "</li>"
       })
     }
     return "<ul>" + printAsHTML +  "</ul>"
