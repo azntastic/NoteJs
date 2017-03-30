@@ -24,6 +24,19 @@ function checkTakesANoteModel(){
 };
 
 
+function checksForHTMLConversion(){
+  var note = new Note("Roar")
+  var singlenoteview = new SingleNoteView(note)
+
+  try {
+    new assert(singlenoteview.printHTML() === "<ul><li>Roar</li></ul>", 'not printed as html', 'checksForHTMLConversion').isTrue();
+  }
+  catch(err) {
+    console.log(err.message)
+  }
+};
+
 
 checkSingleNoteViewObjectExists()
 checkTakesANoteModel()
+checksForHTMLConversion()
