@@ -42,9 +42,22 @@ function checkTextInputIsPrinted() {
   }
 };
 
+function checkNoteHasAnID() {
+  var note = new Note("roar", 1);
+  console.log(note.id)
+
+  try{
+    new assert(note.id === 1, "ID doesn't match expectation", "checkNoteHasAnID").isTrue()
+  }
+  catch(err) {
+    console.log(err.message)
+  }
+}
+
 
 
 checkNoteMethodExists();
 checkNoteIsString();
 checkTextInputIsStored();
 checkTextInputIsPrinted();
+checkNoteHasAnID();

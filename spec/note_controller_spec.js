@@ -27,8 +27,9 @@ function checkDisplayNotesMethodCreatesHTML() {
   catch(err) {
     console.log(err.message);
   }
-
 }
+
+
 
 checkNoteControllerExists()
 checkDisplayNotesMethodCreatesHTML()

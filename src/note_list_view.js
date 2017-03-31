@@ -11,8 +11,14 @@
       printAsHTML = "No notes found"
     }
     else {
+      console.log(this.noteListToPrint.printList())
       this.noteListToPrint.printList().forEach(function(element){
-        printAsHTML += "<li>" + element + "</li>"
+        // var url = window.location.href
+        // url += window.location.href + this.noteListToPrint.list[0].id
+        // console.log(url)
+        // console.log(element.id)
+        console.log(element)
+        printAsHTML += "<li><a href=#notes/" + element.id + " id='note-link'>" + element.showText().substring(0,20) + "</a></li>"
       })
     }
     return "<ul>" + printAsHTML +  "</ul>"

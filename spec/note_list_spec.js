@@ -58,8 +58,20 @@ function createsAndStoresNote() {
   }
 }
 
+function createsAndStoresNoteWithID() {
+  var noteList = new NoteList();
+  noteList.create("Roar")
+  try {
+    new assert(noteList.list[0].id === 0, "note not created with id", "createsAndStoresNoteWithID").isTrue();
+  }
+  catch(err) {
+    console.log(err.message);
+  }
+}
+
 checkNoteListMethodExists();
 checkNoteListIsArray();
 checkNotesAreStored();
 checkNoteListCanBePrinted();
 createsAndStoresNote();
+createsAndStoresNoteWithID()
