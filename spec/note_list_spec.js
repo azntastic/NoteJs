@@ -37,10 +37,10 @@ function checkNotesAreStored() {
 function checkNoteListCanBePrinted() {
     var noteList = new NoteList();
     var firstNote = new Note("Roar");
-
     noteList.list.push(firstNote);
+
     try {
-      new assert(noteList.printList()[0] === "Roar", "notes not printed", "checkNoteListCanBePrinted").isTrue();
+      new assert(noteList.printList()[0].showText() === "Roar", "notes not printed", "checkNoteListCanBePrinted").isTrue();
     }
     catch(err) {
       console.log(err.message);
@@ -50,8 +50,9 @@ function checkNoteListCanBePrinted() {
 function createsAndStoresNote() {
   var noteList = new NoteList();
   noteList.create("Roar")
+
   try {
-    new assert(noteList.printList()[0] === "Roar", "note not created", "createsAndStoresNote").isTrue();
+    new assert(noteList.printList()[0].showText() === "Roar", "note not created", "createsAndStoresNote").isTrue();
   }
   catch(err) {
     console.log(err.message);

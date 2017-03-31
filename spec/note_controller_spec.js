@@ -22,7 +22,7 @@ function checkDisplayNotesMethodCreatesHTML() {
   controller.DisplayNotes(dummyelement)
 
   try {
-    new assert(dummyelement.innerHTML === "<ul><li>Roar</li></ul>", "doesn't transform to HTML","checkDisplayNotesMethodCreatesHTML").isTrue();
+    new assert(dummyelement.innerHTML === "<ul><li><a href=#notes/0 id='note-link'>Roar</a></li></ul>", "doesn't transform to HTML","checkDisplayNotesMethodCreatesHTML").isTrue();
   }
   catch(err) {
     console.log(err.message);
