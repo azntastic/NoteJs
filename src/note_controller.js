@@ -19,11 +19,22 @@
   NoteController.prototype.DisplayCurrentNote = function() {
     var noteid = location.hash.split('').slice(-1).pop()
 
-
     document
       .getElementById("app")
       .innerHTML = this.notelist.list[noteid].showText()
   };
+
+  var submit = document.getElementById("form");
+  form.addEventListener("submit", function(e){
+    console.log(e)
+    e.preventDefault();
+  })
+
+
+
+  // NoteController.prototype.listenForSubmit = function(){
+  //
+  // }
 
   // NoteController.prototype.getNoteFromURL = function(location) {
   //   return location.hash.split('#')[1];

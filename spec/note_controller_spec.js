@@ -29,9 +29,10 @@ function checkDisplayNotesMethodCreatesHTML() {
   }
 }
 
-function checkDisplayNotesMethodCreatesHTML() {
-  
-}
+// No idea how to test 
+// function checkDisplayNotesMethodCreatesHTML() {
+//
+// }
 
 checkNoteControllerExists()
 checkDisplayNotesMethodCreatesHTML()
