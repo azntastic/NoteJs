@@ -14,6 +14,8 @@
 
   NoteController.prototype.urlChangeDisplaysNotes = function() {
     window.addEventListener("hashchange", this.DisplayCurrentNote);
+    // should bind this after this.DisplayCurrentNote
+    // Would probably solve the following problem with splitting functions
   };
 
   NoteController.prototype.DisplayCurrentNote = function() {
@@ -27,7 +29,10 @@
   var submit = document.getElementById("form");
   form.addEventListener("submit", function(e){
     console.log(e)
+    console.log(e.path[0][0].value)
     e.preventDefault();
+    NoteController.listToDisplay.create(e.path[0][0].value)
+    console.log(listToDisplay)
   })
 
 
