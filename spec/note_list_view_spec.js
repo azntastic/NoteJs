@@ -15,7 +15,7 @@ function checkNoteListHTMLCanBePrinted() {
   var listView = new ListView(noteList);
 
   try {
-    new assert(listView.printHTML() == "<ul><li>Roar</li></ul>", "notes not printed as HTML", "checkNoteListHTMLCanBePrinted").isTrue();
+    new assert(listView.printHTML() == "<ul><li><a href=#notes/0 id='note-link'>Roar</a></li></ul>", "notes not printed as HTML", "checkNoteListHTMLCanBePrinted").isTrue();
   }
   catch(err) {
     console.log(err.message);

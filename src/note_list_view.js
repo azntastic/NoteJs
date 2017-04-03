@@ -12,8 +12,7 @@
     }
     else {
       this.noteListToPrint.printList().forEach(function(element){
-
-        printAsHTML += "<li>" + element.substring(0,20) + "</li>"
+        printAsHTML += "<li><a href=#notes/" + element.id + " id='note-link'>" + element.showText().substring(0,20) + "</a></li>"
       })
     }
     return "<ul>" + printAsHTML +  "</ul>"
