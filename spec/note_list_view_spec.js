@@ -33,7 +33,21 @@ function checkNoteListHTMLPrintsNoNotes() {
   }
 }
 
+function checkNoteListViewMaxChar() {
+  var noteList = new NoteList();
+  noteList.create("theweathertodayisverysunny");
+  var listView = new ListView(noteList);
+
+  try {
+    new assert(listView.printHTML() == "<ul><li>theweathertodayisver</li></ul>", "notes do not have a max of 20 characters", "checkNoteListViewMaxChar").isTrue();
+  }
+  catch(err) {
+    console.log(err.message);
+  }
+}
+
 
 checkNoteListViewExists();
 checkNoteListHTMLCanBePrinted();
 checkNoteListHTMLPrintsNoNotes();
+checkNoteListViewMaxChar();
